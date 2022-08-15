@@ -1,0 +1,23 @@
+{
+    "name": "squadbeyondログイン管理",
+    "description": "squadbeyondの現在のログイン者が表示される",
+    "manifest_version": 3,
+    "version": "1.0.0",
+    "permissions": [
+        "tabs",
+        "storage",
+        "scripting"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://app.squadbeyond.com/*"],
+            "js": ["content.js"]
+        }
+    ]
+}
