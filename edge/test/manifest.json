@@ -1,0 +1,17 @@
+{
+    "name": "URLsToSpreadSheets",
+    "author": "unknown",
+    "version": "0.1",
+    "manifest_version": 3,
+    "description": "write URLs in spread sheets",
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "main.js"
+            ]
+        }
+    ]
+}
