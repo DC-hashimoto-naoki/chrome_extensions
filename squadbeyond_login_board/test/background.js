@@ -1,5 +1,5 @@
 (function () {
-    console.log('background.js is runnning');
+    console.log('background.js is running');
 
     const getName = async () => {
         let name = null;
@@ -53,14 +53,13 @@
             let name = result.name;
             let email = result.email;
             console.log(name);
-            sendLogoutData(name, email);
+            // sendLogoutData(name, email);
+            // if tab close, the state is still login for a while.
         })
 
 
     // on install
     chrome.runtime.onInstalled.addListener(function () {
         console.log("now installed");
-        
-
     })
 })();

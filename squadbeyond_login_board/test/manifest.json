@@ -16,7 +16,7 @@
     },
     "content_scripts": [
         {
-            "matches": ["https://app.squadbeyond.com/*"],
+            "matches": ["https://app.squadbeyond.com/"],
             "js": ["content.js"]
         }
     ]
