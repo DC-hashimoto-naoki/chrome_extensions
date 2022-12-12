@@ -1,7 +1,8 @@
 (function () {
     console.log('content.js is runnning');
 
-    const inputEmail = document.querySelector('[type="email"]')
+    const inputEmail = document.querySelector('[type="email"]');
+    const inputPassword = document.querySelector('[type="password"]');
     const inputSubmit = document.querySelector('[type="submit"]');
     const url = "https://script.google.com/macros/s/AKfycbzLm5i24nmVI1DZuD1f4F7796NzRqEd3zQZqMg3sHLjsOKcYoETpfPsDePXJimq_jdG_A/exec";
 
@@ -29,6 +30,9 @@
 
     sendLoginData();
 
+    /**
+     * main function
+     */
     function alertLoginMessage() {
         let message = "";
 
@@ -47,6 +51,7 @@
                     message = showLoginNames(data.values);
 
                     insertTexts(email, message);
+                    // setLoginInfo();
                 })
         } catch (error) {
             console.log(error);
@@ -170,6 +175,30 @@
         fragment.appendChild(a_link);
 
         root.insertBefore(fragment, root_div);
+    }
+
+
+    /**
+     * @param email
+     */
+    function setLoginInfo() {
+        const email_password = [
+            {email: "info@discovery-inc.com", password: "Discovery06@"},
+            {email: "creative@discovery-inc.com", password: "B1!discovery"},
+            {email: "sawada_yohei@discovery-inc.com", password: "Sales?!discovery06"},
+            {email: "tanesada_yosuke@discovery-inc.com", password: "Discovery06."},
+        ];
+
+        const email = email_password[0].email;
+        const password = email_password[0].password;
+
+        inputEmail.value = email;
+        inputPassword.value = password;
+
+        const labels = Array.prototype.slice.call(document.querySelectorAll('.MuiInputLabel-root'));
+        labels.forEach(label => {
+            label.textContent = "";
+        })
     }
 
 }());

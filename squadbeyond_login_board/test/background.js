@@ -54,7 +54,7 @@
             let email = result.email;
             console.log(name);
             // sendLogoutData(name, email);
-            // if tab close, the state is still login for a while.
+            // if tab close, the state is still login for a while. so comment out.
         })
 
 
